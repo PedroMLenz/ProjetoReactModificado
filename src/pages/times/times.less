@@ -1,0 +1,151 @@
+.home {
+  align-items: center;
+}
+
+h1,
+h2 {
+  color: #242424;
+}
+
+h1 {
+  margin: 1rem;
+  border-radius: 1rem;
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .products_grid_container {
+    width: fit-content;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .products_grid_container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .products_grid_container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1536px) {
+  .home {
+    max-width: 1280px;
+  }
+
+  .products_grid_container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 2rem /* 32px */;
+  }
+}
+
+//Estilos do skeleton de carregamento
+
+.skeleton-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton-title {
+  width: 60%;
+  height: 20px;
+}
+
+.skeleton-item {
+  width: 90%;
+  height: 15px;
+}
+
+.skeleton-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skeleton-card {
+  margin: 17px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.skeleton-card::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5rem;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 8px 8px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skeleton-card-title {
+  width: 70%;
+  height: 20px;
+  margin: 20px auto auto;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton-card-buttons {
+  display: flex;
+  justify-content: left;
+  gap: 10px; /* Espaço entre os botões */
+  margin-top: 15px;
+}
+
+.skeleton-button {
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

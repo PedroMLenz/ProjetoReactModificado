@@ -1,0 +1,52 @@
+@color_1: #242424;
+@background_color_1: rgb(255, 255, 255);
+
+.input {
+  border: 0;
+  outline: 0;
+  color: @color_1;
+  background-color: @background_color_1;
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+    rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 16%) 0px 0px 0px 1px,
+    rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+    rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 4px 8px;
+  min-height: 28px;
+  vertical-align: middle;
+  transition: background-color 0.24s, box-shadow 0.24s;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.24s, 0.24s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+  margin-bottom: 1rem;
+  width: 100%; /* Make input take full width of its container */
+  max-width: 300px; /* Set a maximum width for the input */
+  transition: background-color 0.24s ease, box-shadow 0.24s ease,
+    color 0.24s ease;
+}
+
+// Adicionando efeito de transição no hover
+.input:hover {
+  color: lighten(@color_1, 20%);
+  background-color: darken(@background_color_1, 5%);
+}
+
+.input:focus {
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+    rgb(36 36 36 / 36%) 0px 0px 0px 4px, rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+    rgb(60 66 87 / 16%) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px,
+    rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: @color_1;
+  align-items: left;
+  text-align: left; /* Align label text to the right */
+}

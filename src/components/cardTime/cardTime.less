@@ -1,0 +1,67 @@
+
+@background-color: #ffffff;
+@border-color: #ccc;
+@title-color: #343a40;
+@button-background: #fff;
+@button-color: #242424;
+@button-hover-background: #f0f0f0;
+@box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+@button-box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+
+.card {
+  margin: 1rem;
+  background-color: @background-color;
+  border: 1px solid @border-color;
+  border-top: 1.5rem solid @border-color;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: @box-shadow;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: @title-color;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.button-card {
+  padding: 1rem;
+  background: @button-background;
+  color: @button-color;
+  border: 0.0625rem solid @border-color;
+  box-shadow: @button-box-shadow;
+  transition: 0.5s;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.button-card:hover {
+  background-color: @button-hover-background;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

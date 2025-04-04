@@ -1,0 +1,143 @@
+.container-perfil {
+    width: 70%;
+    max-width: 137.5rem;
+    height: auto;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #242424;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+
+    img {
+        border-radius: 50%;
+        width: 9.375rem;
+        height: 9.375rem;
+        object-fit: cover;
+        border: 0.1875rem solid #333;
+    }
+}
+
+.button-logout {
+    padding: 1rem;
+    background: #ac0000;
+    color: #fff;
+    border: 0.0625rem solid #ccc;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 0.625rem 0;
+    color: #000000;
+}
+
+.perfilul ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+
+    li {
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+}
+
+.subb {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    margin: 0.625rem 0.3125rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+    .container-perfil {
+        width: 95%;
+        padding: 0.625rem;
+    }
+
+    .profile-picture img {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+
+    p, h1, h2 {
+        font-size: 1rem;
+    }
+
+    .subb {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-perfil {
+        width: 85%;
+        padding: 1.25rem;
+    }
+
+    .profile-picture img {
+        width: 8.75rem;
+        height: 8.75rem;
+    }
+
+    .subb {
+        padding: 0.625rem 1.125rem;
+    }
+}
+
+/* Estilos para desktops grandes */
+@media (min-width: 1025px) {
+    .container-perfil {
+        max-width: 62.5rem;
+        padding: 1.875rem;
+    }
+
+    .profile-picture img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .subb {
+        padding: 0.75rem 1.5rem;
+    }
+}
