@@ -2,6 +2,7 @@ import "./times.less";
 import { useEffect, useState } from "react";
 import { mockTimesCapitao } from "../../data/mockTimesCapitao.js";
 import CardTime from "../../components/cardTime/cardTime.jsx";
+import { animate } from "animejs";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -15,6 +16,14 @@ const Home = () => {
     }, 3000);
   }, []);
 
+  useEffect(() => {
+    animate(".card", {
+      translateX: 10,
+      duration: 4000,
+      alternate: true,
+      ease: "outElastic",
+    });
+  }, [data]);
   return (
     <>
       <h1>Gerenciar Times</h1>
@@ -34,7 +43,7 @@ const Home = () => {
       ) : (
         <div className="cards-container">
           {data.map((time) => (
-            <CardTime key={time.id} time={time} />
+            <CardTime key={time.id} time={time} className="card" />
           ))}
         </div>
       )}
