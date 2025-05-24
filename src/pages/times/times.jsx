@@ -26,7 +26,9 @@ const Home = () => {
   }, [data]);
   return (
     <>
-      <h1>Gerenciar Times</h1>
+      <h1 className="text-2xl font-bold mb-4 animate-slide-fade">
+        Gerenciar Times
+      </h1>
       {isLoading ? (
         <div className="skeleton-cards-container">
           {[...Array(2)].map((_, index) => (
