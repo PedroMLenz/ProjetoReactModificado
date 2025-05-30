@@ -4,7 +4,7 @@ import { animate } from "animejs";
 import "./Header.less";
 import Button from "../Button/button.jsx";
 import { AuthContext } from "../../context/authContext";
-import Logo from "../Logo/Logo.svg";
+import { SVGatorCSSOnlyForReactJS } from "../Logo/Logo.jsx";
 
 function Header() {
   const { user } = useContext(AuthContext);
@@ -27,7 +27,7 @@ function Header() {
   return (
     <header>
       <div>
-        <Logo />
+        <SVGatorCSSOnlyForReactJS />
       </div>
       <nav>
         <ul className="nav-links">
