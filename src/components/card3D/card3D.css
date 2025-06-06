@@ -1,0 +1,30 @@
+.cardd {
+  width: 320px;
+  height: 420px;
+  background: rgba(255 255 255 / 0.1); /* branco transparente */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cardd:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+}
+
+.cardd-3d-container {
+  flex-grow: 1;
+  position: relative;
+}
+
+.cardd-info {
+  padding: 16px;
+  color: white;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

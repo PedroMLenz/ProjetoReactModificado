@@ -9,6 +9,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation } from "swiper/modules";
+import Card3D from "../../components/card3D/card3D.tsx";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -79,6 +80,11 @@ const Home = () => {
           ))}
         </div>
       )}
+      <div
+        style={{ display: "flex", justifyContent: "center", padding: "40px" }}
+      >
+        <Card3D />
+      </div>
     </>
   );
 };
